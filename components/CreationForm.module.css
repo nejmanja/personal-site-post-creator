@@ -1,0 +1,30 @@
+.form {
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+}
+
+.form label,
+.form input,
+.form textarea {
+	display: block;
+}
+
+.input {
+	background-color: hsl(var(--clr-less-dark));
+	color: inherit;
+	font-family: inherit;
+	border: none;
+	outline: none;
+	width: 100%;
+}
+
+.form textarea {
+	width: 100%;
+	resize: vertical;
+}
+
+.button{
+    margin-block: 1rem;
+    margin-inline: auto;
+}
