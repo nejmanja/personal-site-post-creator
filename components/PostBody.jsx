@@ -1,10 +1,12 @@
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function PostBody({ children }) {
 	return (
 		<ReactMarkdown
+			rehypePlugins={[rehypeRaw]}
 			children={children}
 			components={{
 				code({ node, inline, className, children, ...props }) {
@@ -14,7 +16,7 @@ export default function PostBody({ children }) {
 							children={String(children).replace(/\n$/, "")}
 							language={match[1]}
 							PreTag="div"
-                            style={darcula}
+							style={darcula}
 							customStyle={{
 								background: "hsl(var(--clr-less-dark))",
 								textShadow: "none",

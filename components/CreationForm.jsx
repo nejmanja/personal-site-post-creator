@@ -26,11 +26,12 @@ export default function CreationForm({ setSubmitted, postData, setPostData }) {
 		fileReader.onload = (e) => {
 			console.log("e.target.result", e.target.result);
 			setFormData(JSON.parse(e.target.result));
-            setStyleData(
-                JSON.stringify(JSON.parse(e.target.result).thumbStyle)
-                    .replace("{", "{\n  ")
-                    .replace("}", "\n}")
-                    .replaceAll('",', '",\n  '))
+			setStyleData(
+				JSON.stringify(JSON.parse(e.target.result).thumbStyle)
+					.replace("{", "{\n  ")
+					.replace("}", "\n}")
+					.replaceAll('",', '",\n  ')
+			);
 		};
 	};
 	function handleCategoryChange(e, catName) {
@@ -56,6 +57,16 @@ export default function CreationForm({ setSubmitted, postData, setPostData }) {
 					name="title"
 					value={formData.title}
 					onChange={(e) => handleChange(e, "title")}
+				/>
+			</label>
+			<label>
+				Slug:
+				<input
+					className={styles.input}
+					type="text"
+					name="slug"
+					value={formData.slug}
+					onChange={(e) => handleChange(e, "slug")}
 				/>
 			</label>
 			<label>
@@ -124,7 +135,11 @@ export default function CreationForm({ setSubmitted, postData, setPostData }) {
 				</div>
 			</div>
 			<input type="submit" className={styles.button} />
-			<input type="file" className={styles.button} onChange={handleFileUpload} />
+			<input
+				type="file"
+				className={styles.button}
+				onChange={handleFileUpload}
+			/>
 			<a
 				type="button"
 				href={`data:text/json;charset=utf-8,${encodeURIComponent(
