@@ -20,6 +20,7 @@ export default function PostPreview({post}) {
 					<Image src={post.photo} layout="fill" objectFit="cover" />
 				) : (
 					<div
+                        className={`${utilStyles.uppercase} ${utilStyles.bold}`}
 						style={{
 							...post.thumbStyle,
 							backgroundColor: "black",
@@ -27,6 +28,7 @@ export default function PostPreview({post}) {
 							width: "100%",
 							display: "flex",
 							textAlign: "center",
+                            fontSize: "4vw",
 							alignItems: "center",
 							justifyContent: "center",
 							flexDirection: "column",
@@ -37,18 +39,13 @@ export default function PostPreview({post}) {
 							lineHeight: 1.4,
 						}}
 					>
-						{post.fancyTitle}
+						{post.fancyTitle + " " + post.title}
 					</div>
 				)}
 			</div>
 			<div className={styles.content}>
-				<h1
-					className={`${styles.title} ${utilStyles.uppercase} ${utilStyles.bold} ${utilStyles.fs800}`}
-				>
-					{post.title}
-				</h1>
 				<div className={`${styles.desc} ${utilStyles.fs400}`}>
-					<PostBody>{post.desc}</PostBody>
+					<PostBody>{post.body}</PostBody>
 				</div>
 			</div>
 		</div>

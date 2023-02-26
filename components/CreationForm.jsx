@@ -92,13 +92,23 @@ export default function CreationForm({ setSubmitted, postData, setPostData }) {
 				/>
 			</label>
 			<label>
-				Content:
+				Description:
 				<textarea
 					className={styles.input}
 					name="desc"
-					rows="20"
+					rows="5"
 					value={formData.desc}
 					onChange={(e) => handleChange(e, "desc")}
+				/>
+			</label>
+			<label>
+				Body:
+				<textarea
+					className={styles.input}
+					name="body"
+					rows="20"
+					value={formData.body}
+					onChange={(e) => handleChange(e, "body")}
 				/>
 			</label>
 			Categories:

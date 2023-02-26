@@ -10,7 +10,7 @@
 
 .desc {
 	text-align: justify;
-	margin-block-end: 1rem;
+	margin-block: 1rem;
 }
 
 .desc > p {

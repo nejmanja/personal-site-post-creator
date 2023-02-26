@@ -5,7 +5,8 @@ import PostPreview from "../components/PostPreview";
 const dummyPost = {
 	title: "Hello Website; Hello Next.js!",
 	slug: "hello-website-001",
-	desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, doloribus ut veniam provident quod et expedita ab voluptatem quaerat exercitationem, iure vitae at! Debitis qui culpa, temporibus amet sequi fugiat.",
+    desc: "Lorem ipsum",
+	body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, doloribus ut veniam provident quod et expedita ab voluptatem quaerat exercitationem, iure vitae at! Debitis qui culpa, temporibus amet sequi fugiat.",
 	categories: ["programming", "visual"],
 	fancyTitle: "⚛️Next is best.🌐",
 	thumbStyle: {

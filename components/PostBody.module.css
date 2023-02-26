@@ -1,0 +1,14 @@
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:hover{
+    text-decoration-line: underline;
+    color: hsl(var(--clr-white) / 0.75);
+}
+
+.icon{
+    font-size: 75%;
+    color: hsl(var(--clr-white) / 0.75);
+}
