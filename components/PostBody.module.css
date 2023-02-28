@@ -1,14 +1,23 @@
-.link{
-    text-decoration: none;
-    color: inherit;
+.headingLink {
+	text-decoration: none;
+	color: inherit;
+	text-align: left;
 }
 
-.link:hover{
-    text-decoration-line: underline;
-    color: hsl(var(--clr-white) / 0.75);
+.headingLink > h1 {
+	padding-block-start: 1rem;
 }
 
-.icon{
-    font-size: 75%;
+.headingLink:hover {
+	text-decoration-line: underline;
+	color: hsl(var(--clr-white) / 0.75);
+}
+
+.icon {
+	font-size: 75%;
+	color: hsl(var(--clr-white) / 0.75);
+}
+
+.link {
     color: hsl(var(--clr-white) / 0.75);
 }
